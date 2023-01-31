@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, View, ScrollView } from "react-native";
+import { SafeAreaView, View, ScrollView, StyleSheet } from "react-native";
 
 import { COLORS, SIZES } from "../constants";
 
@@ -18,12 +18,12 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = React.useState(1);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>
+    <SafeAreaView style={styles.container}>
       {/* Header Section */}
       <HeaderSection profile={profile} />
 
       {/* Body Section */}
-      <ScrollView style={{ marginTop: SIZES.radius }}>
+      <ScrollView style={styles.body}>
         {/* Books Section */}
         <View>
           <BookSection myBooks={myBooks} />
@@ -41,3 +41,8 @@ const Home = () => {
 };
 
 export default Home;
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: COLORS.black },
+  body: { marginTop: SIZES.radius },
+});
