@@ -3,7 +3,7 @@ import {
   SafeAreaView,
   View,
   Text,
-  TouchableOpacity,
+  Pressable,
   Image,
   StyleSheet,
   FlatList,
@@ -18,7 +18,7 @@ export default function CategoryHeader({
 }) {
   const renderItem = ({ item }) => {
     return (
-      <TouchableOpacity
+      <Pressable
         style={styles.itemContainer}
         onPress={() => setSelectedCategory(item.id)}
       >
@@ -28,7 +28,7 @@ export default function CategoryHeader({
         {selectedCategory != item.id && (
           <Text style={styles.selectedCatOff}>{item.categoryName}</Text>
         )}
-      </TouchableOpacity>
+      </Pressable>
     );
   };
 

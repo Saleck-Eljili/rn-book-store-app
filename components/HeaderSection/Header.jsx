@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
+import { View, Text, Pressable, Image, StyleSheet } from "react-native";
 
 import { COLORS, FONTS, SIZES, icons } from "../../constants";
 import React from "react";
@@ -15,7 +15,7 @@ export default Header = ({ profile }) => {
       </View>
 
       {/* Points */}
-      <TouchableOpacity
+      <Pressable
         style={styles.points}
         onPress={() => {
           console.log("Point");
@@ -32,7 +32,7 @@ export default Header = ({ profile }) => {
 
           <Text style={styles.pointText}>{profile.point} point</Text>
         </View>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };

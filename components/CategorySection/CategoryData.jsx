@@ -3,7 +3,7 @@ import {
   SafeAreaView,
   View,
   Text,
-  TouchableOpacity,
+  Pressable,
   Image,
   ScrollView,
   FlatList,
@@ -30,7 +30,7 @@ export default function CategoryData({
   const renderItem = ({ item }) => {
     return (
       <View style={styles.itemContainer}>
-        <TouchableOpacity
+        <Pressable
           style={styles.itemSubContainer}
           onPress={() => console.log("Navigation")}
         >
@@ -84,10 +84,10 @@ export default function CategoryData({
               )}
             </View>
           </View>
-        </TouchableOpacity>
+        </Pressable>
 
         {/* Bookmark Button */}
-        <TouchableOpacity
+        <Pressable
           style={styles.bookmark}
           onPress={() => console.log("Bookmark")}
         >
@@ -96,7 +96,7 @@ export default function CategoryData({
             resizeMode="contain"
             style={styles.bookmarkImage}
           />
-        </TouchableOpacity>
+        </Pressable>
       </View>
     );
   };

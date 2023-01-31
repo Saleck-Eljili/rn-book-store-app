@@ -2,7 +2,7 @@ import React from "react";
 import {
   View,
   Text,
-  TouchableOpacity,
+  Pressable,
   Image,
   FlatList,
   StyleSheet,
@@ -13,7 +13,7 @@ import { COLORS, FONTS, SIZES, icons } from "../../constants";
 export default function BookSection({ myBooks, navigation }) {
   const renderItem = ({ item, index }) => {
     return (
-      <TouchableOpacity
+      <Pressable
         style={[
           styles.touch,
           {
@@ -37,7 +37,7 @@ export default function BookSection({ myBooks, navigation }) {
           <Image source={icons.page_icon} style={styles.infoImage} />
           <Text style={styles.textInfo}>{item.completion}</Text>
         </View>
-      </TouchableOpacity>
+      </Pressable>
     );
   };
 
@@ -47,9 +47,9 @@ export default function BookSection({ myBooks, navigation }) {
       <View style={styles.header}>
         <Text style={styles.mybookText}>My Book</Text>
 
-        <TouchableOpacity onPress={() => console.log("See More")}>
+        <Pressable onPress={() => console.log("See More")}>
           <Text style={styles.seemoreText}>see more</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
 
       {/* Books */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
+import { View, Text, Pressable, Image, StyleSheet } from "react-native";
 
 import { COLORS, FONTS, SIZES, icons } from "../../constants";
 import LineDivider from "./LineDivider";
@@ -9,10 +9,7 @@ export default ButtonSection = () => {
     <View style={styles.container}>
       <View style={styles.subContainer}>
         {/* Claim */}
-        <TouchableOpacity
-          style={{ flex: 1 }}
-          onPress={() => console.log("Claim")}
-        >
+        <Pressable style={{ flex: 1 }} onPress={() => console.log("Claim")}>
           <View style={styles.sectionView}>
             <Image
               source={icons.claim_icon}
@@ -21,16 +18,13 @@ export default ButtonSection = () => {
             />
             <Text style={styles.claimText}>Claim</Text>
           </View>
-        </TouchableOpacity>
+        </Pressable>
 
         {/* Divider */}
         <LineDivider />
 
         {/* Get Point */}
-        <TouchableOpacity
-          style={{ flex: 1 }}
-          onPress={() => console.log("Get Point")}
-        >
+        <Pressable style={{ flex: 1 }} onPress={() => console.log("Get Point")}>
           <View
             style={{
               flex: 1,
@@ -46,16 +40,13 @@ export default ButtonSection = () => {
             />
             <Text style={styles.getpointText}>Get Point</Text>
           </View>
-        </TouchableOpacity>
+        </Pressable>
 
         {/* Divider */}
         <LineDivider />
 
         {/* My Card */}
-        <TouchableOpacity
-          style={{ flex: 1 }}
-          onPress={() => console.log("My Card")}
-        >
+        <Pressable style={{ flex: 1 }} onPress={() => console.log("My Card")}>
           <View style={styles.sectionView}>
             <Image
               source={icons.card_icon}
@@ -64,7 +55,7 @@ export default ButtonSection = () => {
             />
             <Text style={styles.mycardText}>My Card</Text>
           </View>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );
